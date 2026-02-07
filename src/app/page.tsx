@@ -36,7 +36,7 @@ export default function Home() {
     },
     {
       title: "Go-Karting",
-      description: "Racing at top speeds.",
+      description: "Active member of the University Karting society. Whether it's shaving tenths of a second off a lap time or competing in sprint races, I love the mix of high-speed strategy and mechanical precision. It’s my favorite way to reset and stay sharp outside of studying.",
       image: "/karting.jpg"
     }
   ];
