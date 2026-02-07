@@ -6,6 +6,7 @@ import Heading from '@/components/heading';
 import Image from 'next/image';
 import ProjectCard from "@/components/project";
 import ExperienceCard from "@/components/experience";
+import HobbyCard from "@/components/hobbies";
 
 export default function Home() {
   const myExperience = [
@@ -25,7 +26,19 @@ export default function Home() {
       tags: ["Next.js", "React", "Tailwind"],
       image: "/portfolio.png"
     },
+  ];
 
+  const myHobbies = [
+    {
+      title: "Scuba Diving",
+      description: "Active member of Loughborough University Sub Aqua society (LUSAC). Currently working towards advanced certifications and exploring diverse marine ecosystems globally. Diving has taught me disciplined preparation, composure under pressure, and the importance of the buddy system. It is also something i thoroughly enjoy doing outside of my studies", 
+      image: "/scuba.png"
+    },
+    {
+      title: "Go-Karting",
+      description: "Racing at top speeds.",
+      image: "/karting.jpg"
+    }
   ];
   return (
     <main>
@@ -48,6 +61,9 @@ export default function Home() {
           {myProjects.map((project, index) => (<ProjectCard key={index} title={project.title} description={project.description} tags={project.tags} image={project.image}/>))}
           </div>
           <Heading title="Hobbies" />
+          <div className="flex flex-row flex-wrap justify-center gap-8 w-full max-w-5xl">
+          {myHobbies.map((hobby, index) => (<HobbyCard key={index} title={hobby.title} description={hobby.description} image={hobby.image}/>))}
+          </div>
       </div>
     </main>
   );
