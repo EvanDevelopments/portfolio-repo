@@ -19,7 +19,7 @@ export default function HobbyCard({image,title,description}:ExperienceProps){
     </div>
     <div className="p-6">
         <h3 className="text-2xl font-bold">{title}</h3>
-        <p className="text-white mt-2 leading-relaxed font-bold">{title}</p>
+
         <p className="text-zinc-400 text-sm t-2 leading-relaxed">{description}</p>
     </div> 
     </motion.div>

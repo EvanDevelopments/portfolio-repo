@@ -7,13 +7,32 @@ import Image from 'next/image';
 import ProjectCard from "@/components/project";
 import ExperienceCard from "@/components/experience";
 import HobbyCard from "@/components/hobbies";
+import AboutCard from "@/components/about"
+import { useEffect } from "react";
+
 
 export default function Home() {
+  useEffect(() => {
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname);
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
+
+  const myAbout = [
+    {
+      description: "My name is Evan Denholm-Chapman and I'm a Full-Stack Developer based in the United Kingdom, currently studying Computer Science at Loughborough University. On the front-end, i specialize in the React ecosystem, specifically Next.js and Tailwind CSS. My back-end specializations include Python, Java and C, alongside MySQL and Git Version Control.",
+    },
+
+  ];
+
+
   const myExperience = [
     {
       company: "ARM",
-      role: "Software Engineer",
-      description: "Worked within a team of software engineers in a structured development process to design and implement a Python-based satellite telemetry system using micro: bits, collecting real-time position and speed data to determine optimal parachute deployment timing. Engineered efficient Python algorithms on micro: bit devices to process telemetry data with high accuracy, enabling reliable decisionmaking in critical mission scenarios. Collaborated cross-functionally to integrate micro: bit hardware with satellite systems, ensuring robust performance and system reliability under real-world conditions. ",
+      role: "Software Engineer | Internship",
+      description: "Worked within a team of software engineers in a structured development process to design and implement a Python-based satellite telemetry system using micro:bits, collecting real-time position and speed data to determine optimal parachute deployment timing. Engineered efficient Python algorithms on micro: bit devices to process telemetry data with high accuracy, enabling reliable decisionmaking in critical mission scenarios. Collaborated cross-functionally to integrate micro: bit hardware with satellite systems, ensuring robust performance and system reliability under real-world conditions. ",
       date: "2 Month",
       image: "/arm.jpeg"
     },
@@ -26,6 +45,18 @@ export default function Home() {
       tags: ["Next.js", "React", "Tailwind"],
       image: "/portfolio.png"
     },
+    {
+      title: "COVID-19 Cases In Realtime",
+      description: "Built with Next.js and Tailwind.",
+      tags: ["Next.js", "React", "Tailwind"],
+      image: "/covid.png"
+    },
+    {
+      title: "F1 Race Predictor",
+      description: "An end-to-end machine learning pipeline to forecast Formula 1 race results. By processing over 50,000 historical records from 1950–2020, I engineered a Random Forest Regression model that predicts finishing positions based on grid placement, constructor standings, and fastest lap telemetry. The model features custom hyperparameter optimization using RandomizedSearchCV and achieves high accuracy within a ±1 position margin.",
+      tags: ["Python", "Scikit-Learn", "Pandas", "NumPy", "Random Forest"],
+      image: "/f1.jpg"
+    }
   ];
 
   const myHobbies = [
@@ -42,7 +73,7 @@ export default function Home() {
   ];
   return (
     <main>
-      <Navbar /> 
+      <Navbar/> 
 
       <div className="flex flex-row items-center justify-center pt-40  px-10 gap-20 text-white">
 
@@ -52,16 +83,20 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center pt-60 px-10 gap-20 text-white ">
-          <Heading title="Experience" />
-          <div className="flex flex-row flex-wrap justify-center gap-8 w-full max-w-5xl">
+          <Heading title="About"/>
+          <div id="about" className="scroll-mt-100">
+          {myAbout.map((about, index) => (<AboutCard key={index} description={about.description}/>))}
+          </div>
+          <Heading title="Experience"/>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl mx-auto px-4">
           {myExperience.map((experience, index) => (<ExperienceCard key={index} company={experience.company} description={experience.description} role={experience.role} date={experience.date} image={experience.image}/>))}
           </div>
           <Heading title="Projects" />
-          <div className="flex flex-row flex-wrap justify-center gap-8 w-full max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl mx-auto px-4">
           {myProjects.map((project, index) => (<ProjectCard key={index} title={project.title} description={project.description} tags={project.tags} image={project.image}/>))}
           </div>
           <Heading title="Hobbies" />
-          <div className="flex flex-row flex-wrap justify-center gap-8 w-full max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl mx-auto px-4">
           {myHobbies.map((hobby, index) => (<HobbyCard key={index} title={hobby.title} description={hobby.description} image={hobby.image}/>))}
           </div>
       </div>
