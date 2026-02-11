@@ -22,7 +22,7 @@ export default function Home() {
 
   const myAbout = [
     {
-      description: "My name is Evan Denholm-Chapman and I'm a Full-Stack Developer based in the United Kingdom, currently studying Computer Science at Loughborough University. On the front-end, i specialize in the React ecosystem, specifically Next.js and Tailwind CSS. My back-end specializations include Python, Java and C, alongside MySQL and Git Version Control.",
+      description: "My name is Evan Denholm-Chapman and I'm a Full-Stack Developer based in the United Kingdom, currently studying Computer Science at Loughborough University. On the front-end, i specialize in the React, specifically Next.js and Tailwind CSS. My back-end specializations include Python, Java and C, alongside MySQL and Git Version Control.",
     },
 
   ];
@@ -69,6 +69,11 @@ export default function Home() {
       title: "Go-Karting",
       description: "Active member of the University Karting society. Whether it's shaving tenths of a second off a lap time or competing in sprint races, I love the mix of high-speed strategy and mechanical precision. It’s my favorite way to reset and stay sharp outside of studying.",
       image: "/karting.jpg"
+    },
+    {
+      title: "Gym",
+      description: "Active member of the University gym with a usual commitment to a 5-day weekly training split, emphasizing discipline, consistency, and progressive overload. I find that regular strength training not only improves my physical health but also enhances my mental focus and resilience.",
+      image: "/gym.jpg"
     }
   ];
   return (
@@ -96,7 +101,7 @@ export default function Home() {
           {myProjects.map((project, index) => (<ProjectCard key={index} title={project.title} description={project.description} tags={project.tags} image={project.image}/>))}
           </div>
           <Heading title="Hobbies" />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl mx-auto px-4 mb-20">
           {myHobbies.map((hobby, index) => (<HobbyCard key={index} title={hobby.title} description={hobby.description} image={hobby.image}/>))}
           </div>
       </div>
