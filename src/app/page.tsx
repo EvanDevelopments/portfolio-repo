@@ -47,14 +47,14 @@ export default function Home() {
     },
     {
       title: "COVID-19 Cases In Realtime",
-      description: "Built with Next.js and Tailwind.",
-      tags: ["Next.js", "React", "Tailwind"],
-      image: "/covid.png"
+      description: "A specialized data processing tool developed to analyze the geographic and temporal spread of COVID-19 across the United States. Using Python and libraries such as GeoPandas and Mapclassify, I engineered a week-by-week aggregation engine to normalize daily reporting fluctuations, effectively revealing the underlying growth curves. The project transforms raw public health datasets into a series of clear, high-fidelity time-series visualizations, focusing on the velocity of infection rates and regional hotspot identification.To handle the computational load of processing millions of data points, I utilized Joblib for parallel processing, ultimately compiling the time-series maps into an animated visual narrative using ImageIO.",
+      tags: ["Python", "GeoPandas", "Pandas", "Matplotlib", "Joblib", "ImageIO", "Mapclassify"],
+      image: "/covid2.jpg"
     },
     {
       title: "F1 Race Predictor",
       description: "An end-to-end machine learning pipeline to forecast Formula 1 race results. By processing over 50,000 historical records from 1950–2020, I engineered a Random Forest Regression model that predicts finishing positions based on grid placement, constructor standings, and fastest lap telemetry. The model features custom hyperparameter optimization using RandomizedSearchCV and achieves high accuracy within a ±1 position margin.",
-      tags: ["Python", "Scikit-Learn", "Pandas", "NumPy", "Random Forest"],
+      tags: ["Python", "Scikit-Learn", "GeoPandas", "Pandas", "NumPy", "Random Forest"],
       image: "/f1.jpg"
     }
   ];
