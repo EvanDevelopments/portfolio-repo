@@ -1,4 +1,4 @@
-import Navbar from '@/components/Navbar';
+import Navbar from '@/app/resume/Navbar';
 import Heading from '@/components/heading';
 
 

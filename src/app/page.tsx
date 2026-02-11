@@ -2,6 +2,7 @@
 import {motion} from "framer-motion";
 import Typewriter from 'typewriter-effect';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/footer';
 import Heading from '@/components/heading';
 import Image from 'next/image';
 import ProjectCard from "@/components/project";
@@ -105,6 +106,7 @@ export default function Home() {
           {myHobbies.map((hobby, index) => (<HobbyCard key={index} title={hobby.title} description={hobby.description} image={hobby.image}/>))}
           </div>
       </div>
+      <Footer/> 
     </main>
   );
 }
