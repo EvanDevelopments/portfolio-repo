@@ -79,7 +79,7 @@ export default function Home() {
 
         <motion.div className="max-w-xl w-[500px]" initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 2.1, ease: "easeOut" }}><h1 className="font-bold text-7xl tracking-tighter"><Typewriter options={{strings:['Hey, im Evan,'], autoStart:true, loop:true, delay:75, cursor:"|"}}onInit={(typewriter) => {typewriter.typeString("Hey, im Evan,").pauseFor(20000).deleteAll().start();}}/></h1><p className="text-zinc-400 mt-4 text-xl">Lougborough University, Computer Science</p><p className="text-zinc-400 mt-4 text-xl leading-1">Software Engineer</p></motion.div>
         <div className="relative w-[400px] h-[500px]">
-          <Image src="/evan.jpg" alt="Evan" fill className="rounded-xl object-cover border-2 border-white/10 shadow-2xl"/>
+          <Image src="/evan.jpg" alt="Evan" fill className="rounded-xl object-cover border-2 border-white/10 shadow-lg"/>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center pt-60 px-10 gap-20 text-white ">
