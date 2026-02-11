@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Footer({}) {
   return (
-    <nav className="flex justify-between items-center p-1 bg-[#0f0f0f] border-b border-zinc-800 text-white w-full mb-60">
+    <nav className="flex justify-between items-center p-60 bg-[#0f0f0f] border-b border-zinc-800 text-white w-full mb-60">
 
    
     </nav>
