@@ -1,5 +1,6 @@
 import Navbar from '@/app/resume/Navbar';
 import Heading from '@/components/heading';
+import Footer from '@/components/footer';
 
 
 
@@ -26,7 +27,7 @@ export default function ResumePage() {
 
         </div>
         
-
+        <Footer/> 
     </main>
   );
 }
