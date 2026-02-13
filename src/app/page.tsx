@@ -76,6 +76,8 @@ export default function Home() {
       description: "Active member of the University gym with a usual commitment to a 5-day weekly training split, emphasizing discipline, consistency, and progressive overload. I find that regular strength training not only improves my physical health but also enhances my mental focus and resilience.",
       image: "/gym.jpg"
     }
+    
+    
   ];
   return (
     <main>
