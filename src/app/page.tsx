@@ -42,8 +42,8 @@ export default function Home() {
   const myProjects = [
     {
       title: "Portfolio Site",
-      description: "Built with Next.js and Tailwind.",
-      tags: ["Next.js", "React", "Tailwind"],
+      description: "Developed a high-performance personal portfolio website using Next.js 14 and React, leveraging Static Site Generation (SSG) to ensure near-instantaneous load times. I engineered a custom, responsive design system from the ground up using Tailwind CSS, utilizing a mobile-first philosophy and dynamic breakpoints to provide a seamless user experience across all device architectures. The project integrates custom SVG iconography and a streamlined deployment pipeline via Vercel, demonstrating a professional-grade workflow including continuous integration and version control management through GitHub.",
+      tags: ["TypeScript","Next.js", "React", "Tailwind"],
       image: "/portfolio.png"
     },
     {
@@ -96,7 +96,7 @@ export default function Home() {
           {myAbout.map((about, index) => (<AboutCard key={index} description={about.description}/>))}
           </div>
           <Heading title="Experience"/>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1  gap-8   mx-auto px-4 ">
           {myExperience.map((experience, index) => (<ExperienceCard key={index} company={experience.company} description={experience.description} role={experience.role} date={experience.date} image={experience.image}/>))}
           </div>
           <Heading title="Projects" />
