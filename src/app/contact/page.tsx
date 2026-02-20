@@ -10,8 +10,14 @@ export default function ContactPage() {
         <Navbar/> 
 
         <div className="flex flex-col items-center justify-center pt-60 px-10 gap-20 text-white ">
-                  <Heading title="Contact Me"/>
+            <Heading title="Contact Me"/>
+            <form className="">
+                <textarea id="message" name="message" rows={4} defaultValue={""} className="block w-150 rounded-md bg-zinc-900/50 px-3.5 py-2 text-base text-white-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 hover:border-white/20 transition-colors"/>
+
+
+            </form>
         </div>
+        
 
         
         
