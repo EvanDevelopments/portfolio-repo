@@ -9,16 +9,22 @@ export default function ContactPage() {
     <main>
         <Navbar/> 
 
-        <div className="flex flex-col items-center justify-center pt-60 px-10 gap-20 text-white ">
+        <div className="flex flex-col items-center justify-center pt-40 px-10 gap-10 text-white ">
+            
             <Heading title="Contact Me"/>
+
             <div className="w-full max-w-2xl">
                 <label htmlFor="message" className="block text-sm/6 font-semibold text-white-900">Message</label>
                 <form className="space-y-4">
-                    <textarea id="message" name="message" rows={4} defaultValue={""} className="block w-full rounded-md bg-zinc-900/50 px-3.5 py-2 text-base text-white-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 hover:border-white/20 transition-colors"/>
+                    <textarea id="message" name="message" rows={4} defaultValue={""} className="block w-full rounded-md bg-zinc-900/50 px-3.5 py-2 text-base text-white-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-grey-600 hover:border-white/20 transition-colors"/>
 
 
                 </form>
             </div>
+            <button className="bg-white hover:bg-gray-400 text-gray-800 font-bold py-2 px-5 rounded inline-flex items-center">
+                <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+                <span>Submit</span>
+            </button>
         </div>
         
 
