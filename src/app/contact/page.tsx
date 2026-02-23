@@ -17,7 +17,7 @@ export default function ContactPage() {
                 <input type="text" name="_gotcha" style={{ display: 'none' }} />
 
 
-                <div className="flex flex-col-1 mt-2.5 w-full max-w-2xl">
+                <div className="flex flex-col-1 mt-2.5 w-full max-w-2xl gap-2">
 
                     <div className="flex-1">
 
