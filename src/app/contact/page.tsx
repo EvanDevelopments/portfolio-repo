@@ -10,9 +10,11 @@ export default function ContactPage() {
         <Navbar/> 
 
         <div className="flex flex-col items-center justify-center pt-30 px-10 gap-10 text-white ">
-            <form className="flex flex-col items-center space-y-4">
+            <form className="flex flex-col items-center space-y-4" method="POST" action="https://formspree.io/f/xdalpdyb">
             
                 <Heading title="Contact Me"/>
+
+                <input type="text" name="_gotcha" style={{ display: 'none' }} />
 
                     
                 <div className="mt-2.5 w-full max-w-2xl">
