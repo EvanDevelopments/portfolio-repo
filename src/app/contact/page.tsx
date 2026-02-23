@@ -22,7 +22,7 @@ export default function ContactPage() {
                     <div className="flex-1">
 
                         <label htmlFor="first_name" className="block text-sm/6 font-semibold text-white-900">First Name<span className="text-white-400">*</span></label>
-                        <input id="first_name" name="first_name" placeholder="Jhon" required type="text" autoComplete="given-name" className="block w-full rounded-md bg-zinc-900/50 px-3.5 py-2 text-base text-white-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-white-600"/>
+                        <input id="first_name" name="first_name" placeholder="John" required type="text" autoComplete="given-name" className="block w-full rounded-md bg-zinc-900/50 px-3.5 py-2 text-base text-white-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-white-600"/>
                     
                     </div>
 
