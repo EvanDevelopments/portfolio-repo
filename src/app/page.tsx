@@ -83,14 +83,49 @@ export default function Home() {
     <main>
       <Navbar/> 
 
-      <div className="flex flex-row items-center justify-center pt-40  px-10 gap-20 text-white">
+      <div className="flex flex-col lg:flex-row items-center justify-center pt-24 sm:pt-36 lg:pt-40 px-6 sm:px-10 gap-8 lg:gap-20 text-white max-w-7xl mx-auto">
+        <motion.div 
+          className="w-full lg:w-[500px] max-w-xl text-center lg:text-left flex flex-col items-center lg:items-start" 
+          initial={{ opacity: 0, x: -50 }} 
+          animate={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
+          {/* Main Title */}
+          <h1 className="font-bold text-5xl sm:text-6xl lg:text-7xl tracking-tighter pt-10">
+            <Typewriter 
+              options={{strings:['Hey, im Evan,'], autoStart:true, loop:true, delay:75, cursor:"|"}}
+              onInit={(typewriter) => {typewriter.typeString("Hey, im Evan,").pauseFor(20000).deleteAll().start();}}
+            />
+          </h1>
 
-        <motion.div className="max-w-xl w-[500px]" initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 2.1, ease: "easeOut" }}><h1 className="font-bold text-7xl tracking-tighter"><Typewriter options={{strings:['Hey, im Evan,'], autoStart:true, loop:true, delay:75, cursor:"|"}}onInit={(typewriter) => {typewriter.typeString("Hey, im Evan,").pauseFor(20000).deleteAll().start();}}/></h1><p className="text-zinc-400 mt-4 text-xl">Lougborough University, Computer Science</p><p className="text-zinc-400 mt-4 text-xl leading-1">Software Engineer</p></motion.div>
-        <div className="relative w-[400px] h-[500px]">
-          <Image src="/evan.jpg" alt="Evan" fill className="rounded-xl object-cover border-2 border-white/10 shadow-lg"/>
+          {/* Centered Image on Mobile '*/}
+          <div className="relative my-15 lg:my-0 lg:hidden w-[300px] h-[400px] sm:w-[300px] sm:h-[380px]">
+            <Image 
+              src="/evan.jpg" 
+              alt="Evan" 
+              fill 
+              priority
+              className="rounded-2xl object-cover border-2 border-white/10 shadow-2xl"
+            />
+          </div>
+
+          {/* Intro Text */}
+          <p className="text-zinc-400 text-base sm:text-x1">Loughborough University, Computer Science</p>
+          <p className="text-zinc-400 mt-1 sm:mt-2 text-base sm:text-x1 leading-tight">Software Engineer</p>
+        </motion.div>
+
+        {/* Image for Desktop Screens (lg+) */}
+        <div className="hidden lg:block relative w-[400px] h-[500px]">
+          <Image 
+            src="/evan.jpg" 
+            alt="Evan" 
+            fill 
+            priority
+            className="rounded-2xl object-cover border-2 border-white/10 shadow-2xl"
+          />
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center pt-60 px-10 gap-20 text-white ">
+      <div className="flex flex-col items-center justify-center pt-110 px-10 gap-20 text-white ">
           <Heading title="About"/>
           <div id="about" className="scroll-mt-100">
           {myAbout.map((about, index) => (<AboutCard key={index} description={about.description}/>))}
