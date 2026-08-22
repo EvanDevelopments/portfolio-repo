@@ -90,27 +90,24 @@ export default function Home() {
           animate={{ opacity: 1, x: 0 }} 
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
-          {/* Main Title */}
           <h1 className="font-bold text-5xl sm:text-6xl lg:text-7xl tracking-tighter pt-10">
             <Typewriter 
               options={{strings:['Hey, im Evan,'], autoStart:true, loop:true, delay:75, cursor:"|"}}
               onInit={(typewriter) => {typewriter.typeString("Hey, im Evan,").pauseFor(20000).deleteAll().start();}}
             />
           </h1>
-
-          {/* Centered Image on Mobile '*/}
           <div className="relative my-15 lg:my-0 lg:hidden w-[300px] h-[400px] sm:w-[300px] sm:h-[380px]">
             <Image 
               src="/evan.jpg" 
               alt="Evan" 
               fill 
               priority
-              className="rounded-2xl object-cover border-2 border-white/10 shadow-2xl"
+              className="rounded-2xl object-cover border-2 border-white/10 shadow-lg"
             />
           </div>
 
           {/* Intro Text */}
-          <p className="text-zinc-400 text-base sm:text-x1">Loughborough University, Computer Science</p>
+          <p className="pt-5 text-zinc-400 text-base sm:text-x1">Loughborough University, Computer Science</p>
           <p className="text-zinc-400 mt-1 sm:mt-2 text-base sm:text-x1 leading-tight">Software Engineer</p>
         </motion.div>
 
@@ -121,7 +118,7 @@ export default function Home() {
             alt="Evan" 
             fill 
             priority
-            className="rounded-2xl object-cover border-2 border-white/10 shadow-2xl"
+            className="rounded-2xl object-cover border-2 border-white/10 shadow-lg"
           />
         </div>
       </div>
