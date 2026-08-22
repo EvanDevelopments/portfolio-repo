@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Footer({}) {
   return (
-    <nav className="flex flex-col items-center justify-center px-6 py-12 md:py-20 bg-[#0f0f0f] border-t border-zinc-800 text-white w-full mt-10 gap-">
+    <nav className="flex flex-col items-center justify-center px-6 py-12 md:py-20 bg-[#0f0f0f] border-t border-zinc-800 text-white w-full mt-10 mb-15 gap-">
       <div className="flex flex-row items-center justify-center gap-4">
         <a href="https://github.com/EvanDevelopments">
           <button className="cursor-pointer hover:bg-slate-200 hover:text-black text-white px-4 py-2 rounded-lg font-medium transition-all rounded inline-flex items-center">
